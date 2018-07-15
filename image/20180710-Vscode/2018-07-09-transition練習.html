@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>07-06-homework</title>
+
+	<style>
+		body{
+			margin:0;
+		}
+		ul{
+			list-style-type:none;
+			margin:0;
+			padding:0;
+		}
+		.nav{
+			height: 50px;
+			background-color: pink;
+			padding: 0 15px;
+		}
+		.logo{width: 50px;	height: 25px;
+			background-color: black;
+			float:left;
+			padding: 12px 0;
+			margin-right: 40px;
+			border-radius: 50px;
+		}
+		.menu > li{
+			float: right;
+			display: inline-block;
+		}
+		.menu > li > a{
+			display: inline-block;
+			color:white;
+			/* 文字裝飾(底線) */
+			text-decoration: none;
+			font-size: 18px;
+			padding: 14px;
+
+		}
+		.menu > li:hover{
+			background-color: lightskyblue;
+		}
+		.relative{
+			position: relative;
+		}
+		.dropdown{
+            position: absolute;
+            width: 100%;
+            height: 0;
+            background-color: #333;
+            text-align: center;
+            border-radius: 4px;
+            z-index: 2;
+            transition: 0.8s;
+            display: block;
+            overflow: hidden;
+		}
+		.dropdown > li{
+			border-top: 1px solid white;
+		}
+		.dropdown > li > a{
+			display: inline-block;
+			text-decoration: none;
+			color:white;
+			font-size: 18px;
+			padding:6px 0;
+		}
+		.menu > li:hover > .dropdown{
+            height:105px;
+		}
+
+        .dropdown>li:hover {
+            background-color: black;
+        }
+
+		.container{
+			max-width: 80%;
+			margin:0 auto;
+			
+			
+		}
+
+
+		.all{width: 100% ;
+		 
+		}
+		
+			.bg{width: 100%;height: 300px;
+			background-image: url(img/2.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-bottom: 30px;
+			transition-timing-function: }
+
+			.up{width: 100%; height: 200px;
+				background-color: white;
+				margin-bottom: 30px;}
+				.upA{position: relative;
+					width: calc(100% / 3 - 20px);height: 200px;
+					background-image: url(img/1.jpg);
+					background-size: cover;
+                    float: left;
+					margin-right: 30px}
+				.upB{position: relative;
+					width: calc(100% / 3 - 20px);height: 200px;
+					background-image: url(img/1.jpg);
+					background-size: cover;
+                    background-position: center;
+                    float: left;
+					margin-right: 30px}
+				.upC{position: relative;
+					width: calc(100% / 3 - 20px);height: 200px;
+					background-image: url(img/1.jpg);
+					background-size: cover;
+                    background-position: center;
+					float: left;}
+
+
+			.mid{width: 100%;height: 200px;
+				background-color: white;
+				margin-bottom: 30px;}
+				.midA{position: relative;
+					width: calc(100% / 3 - 20px);height: 200px;
+					background-image: url(img/1.jpg);
+					background-size: cover;
+					float: left;
+					margin-right: 30px}
+				.midB{position: relative;
+					width: calc(100% / 3 - 20px);height: 200px;
+					background-image: url(img/1.jpg);
+					background-size: cover;
+					float: left;
+					margin-right: 30px;}
+				.midC{position: relative;
+					width: calc(100% / 3 - 20px);height: 200px;
+					background-image: url(img/1.jpg);
+					background-size: cover;
+					float: left}
+
+
+
+			.down{width: 100%;	height: 200px;
+			background-color:white; }	
+				.downA{position: relative;
+					width: calc(100% / 2 - 15px);height: 200px;
+					background-image: url(img/1.jpg);
+					background-size: cover;
+					float: left;
+					margin-right: 30px;}
+				.downB{position: relative;
+					width: calc(100% / 2 - 15px);height: 200px;
+					background-image: url(img/1.jpg);
+					background-size: cover;
+					float: left}
+			
+					.cover{
+                        position: absolute;
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        background-color: rgba(255, 255, 255, 1);
+                        bottom: 0;
+                        left: 0;
+                        transition: 1.5s;
+                        text-align: center;
+					
+					}
+					.upA:hover .cover{
+                        height: 100%;
+                        line-height: 300px;
+                        background-color: rgba(255, 255, 255, 0.5);
+					}	
+					.upB:hover .cover{
+					display: block;
+					}	
+					.upC:hover .cover{
+					display: block;
+					}	
+					.midA:hover .cover{
+					display: block;
+					}	
+					.midB:hover .cover{
+					display: block;
+					}	
+					.midC:hover .cover{
+					display: block;
+					}	
+					.downA:hover .cover{
+					display: block;
+					}	
+					.downB:hover .cover{
+					display: block;
+					}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<div class="logo">
+			
+		</div>
+		<ul class="menu">
+			
+			<li class="relative">
+				<a href="">滑鼠過來</a>
+				<ul class="dropdown">
+					<li><a href="">資訊</a></li>
+					<li><a href="">公司</a></li>
+					<li><a href="">介紹</a></li>
+				</ul>
+			</li>
+			<li><a href="">123</a></li>
+			<li><a href="">456</a></li>
+			<li><a href="">789</a></li>
+		</ul>
+	</div>
+	<div class="container">
+	<div class="all">
+		<div class="bg"></div>
+		<div class="up">
+			
+			<div class="upA">
+				<div class="cover">
+			測試文字
+				</div>
+			</div>
+
+			<div class="upB">				
+				<div class="cover">
+			測試文字
+				</div>
+			</div>
+
+			<div class="upC">				
+				<div class="cover">
+			測試文字
+				</div>
+			</div>
+		</div>
+
+
+		<div class="mid">
+			<div class="midA">				
+				<div class="cover">
+			測試文字
+				</div></div>
+			<div class="midB">				
+				<div class="cover">
+			測試文字
+				</div></div>
+			<div class="midC">				
+				<div class="cover">
+			測試文字
+				</div></div>
+		</div>
+
+		<div class="down">
+			<div class="downA">				
+				<div class="cover">
+			測試文字
+				</div></div>
+			<div class="downB">				
+				<div class="cover">
+			測試文字
+				</div></div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
